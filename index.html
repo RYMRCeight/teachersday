@@ -109,7 +109,8 @@
     <!-- Confetti Layer (Full Screen) -->
     <div id="confetti-container"></div>
 
-    <div id="app-container" class="w-full max-w-lg mx-auto relative z-10">
+    <!-- UPDATED: Increased max width on large screens for landscape feel -->
+    <div id="app-container" class="w-full max-w-lg lg:max-w-4xl mx-auto relative z-10">
         
         <!-- ENTRANCE SCREEN (The Surprise Gate) -->
         <div id="entrance-screen" class="flex flex-col items-center justify-center p-8 bg-white/80 backdrop-blur-md rounded-3xl shadow-2xl border-4 border-pink-300">
@@ -130,7 +131,8 @@
         </div>
 
         <!-- MAIN GREETING SCREEN (Hidden Initially) -->
-        <div id="greeting-screen" class="hidden relative greeting-card-appear p-10 pt-16 pb-16 bg-pink-50/70 rounded-3xl shadow-2xl border-4 border-pink-400 overflow-hidden">
+        <!-- UPDATED: Increased padding for wider layout -->
+        <div id="greeting-screen" class="hidden relative greeting-card-appear p-8 sm:p-12 lg:p-16 bg-pink-50/70 rounded-3xl shadow-2xl border-4 border-pink-400 overflow-hidden">
             
             <!-- Static Floating Decorative Elements (Flowers/Hearts relative to card) -->
             <div class="flower-float one text-rose-300">
@@ -146,35 +148,44 @@
                 <i data-lucide="flower" class="w-12 h-12 opacity-60"></i>
             </div>
 
-            <div class="flex flex-col items-center relative z-10">
-                <div class="text-7xl mb-6 text-rose-500 animate-bounce">
-                    <i data-lucide="book-open-text" class="w-16 h-16 inline-block"></i>
-                </div>
-                <h2 class="font-['Playfair_Display'] text-4xl sm:text-5xl font-extrabold text-pink-800 mb-6 text-center leading-tight">
-                    Happy Teacher's Day, My Love!
-                </h2>
+            <!-- NEW: Responsive Grid for Landscape Layout -->
+            <div class="flex flex-col items-center lg:grid lg:grid-cols-5 lg:gap-10 lg:items-start relative z-10">
                 
-                <p class="text-xl text-gray-700 mt-4 mb-6 leading-relaxed text-center font-medium">
-                    To my dearest Reyshien, on Teacher's Day, I celebrate not just the amazing educator you are to your students, but the incredible teacher you are in my life.
-                </p>
-
-                <p class="text-xl text-pink-700 mb-8 leading-relaxed text-center italic border-t border-b border-rose-200 py-4 max-w-sm">
-                    You teach me patience, kindness, and how to see the beauty in every little thing. Thank you for being my anchor, my inspiration, and my greatest love. Every day with you is a lovely lesson in happiness.
-                </p>
-
-                <div class="text-5xl text-rose-500 mb-8">
-                    <i data-lucide="heart-handshake" class="w-12 h-12 inline-block mx-2"></i>
-                    <i data-lucide="sparkles" class="w-10 h-10 inline-block mx-2 animate-spin-slow"></i>
-                    <i data-lucide="heart" class="w-12 h-12 inline-block mx-2"></i>
+                <!-- LEFT COLUMN (Title and Main Paragraph - Takes 3/5 width on large screens) -->
+                <div class="lg:col-span-3 text-center lg:text-left mb-6 lg:mb-0">
+                    <div class="text-7xl mb-6 text-rose-500 animate-bounce lg:mx-0">
+                        <i data-lucide="book-open-text" class="w-16 h-16 inline-block"></i>
+                    </div>
+                    <h2 class="font-['Playfair_Display'] text-4xl sm:text-5xl font-extrabold text-pink-800 mb-4 lg:mb-6 leading-tight">
+                        Happy Teacher's Day, My Love!
+                    </h2>
+                    
+                    <p class="text-xl text-gray-700 mt-4 leading-relaxed lg:pr-6 font-medium">
+                        To my dearest Reyshien, on Teacher's Day, I celebrate not just the amazing educator you are to your students, but the incredible teacher you are in my life.
+                    </p>
                 </div>
 
-                <p class="text-2xl font-semibold text-pink-700 mt-4">
-                    With all my love,
-                </p>
-                <p class="text-2xl font-extrabold text-rose-600">
-                    Reymarc
-                </p>
+                <!-- RIGHT COLUMN (Quote, Icons, and Signature - Takes 2/5 width on large screens) -->
+                <div class="lg:col-span-2 flex flex-col items-center lg:items-start w-full">
+                    <p class="text-xl text-pink-700 mb-8 leading-relaxed text-center lg:text-left italic border-t border-b border-rose-200 py-4 w-full">
+                        You teach me patience, kindness, and how to see the beauty in every little thing. Thank you for being my anchor, my inspiration, and my greatest love. Every day with you is a lovely lesson in happiness.
+                    </p>
+
+                    <div class="text-5xl text-rose-500 mb-4 lg:mb-6">
+                        <i data-lucide="heart-handshake" class="w-12 h-12 inline-block mx-2"></i>
+                        <i data-lucide="sparkles" class="w-10 h-10 inline-block mx-2 animate-spin-slow"></i>
+                        <i data-lucide="heart" class="w-12 h-12 inline-block mx-2"></i>
+                    </div>
+
+                    <p class="text-2xl font-semibold text-pink-700 mt-4">
+                        With all my love,
+                    </p>
+                    <p class="text-2xl font-extrabold text-rose-600">
+                        Reymarc
+                    </p>
+                </div>
             </div>
+            
         </div>
     </div>
 
